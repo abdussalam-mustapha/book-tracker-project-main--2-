@@ -1541,6 +1541,13 @@ progress::-moz-progress-bar {
     color: var(--ink);
 }
 
+/* margin-top:auto inside a flex column pushes this row to the card's bottom,
+   so short cards still line up with their taller neighbour. */
+.push-bottom {
+    margin-top: auto;
+    padding-top: 12px;
+}
+
 .noise {
     display: inline-flex;
     align-items: center;
@@ -1610,11 +1617,9 @@ progress::-moz-progress-bar {
 
 /* --- Interactive map --- */
 .map-card {
-    position: relative;            /* anchor for the centred button */
+    position: relative;
     overflow: hidden;
-    border: 1px solid var(--line);
     border-radius: var(--radius);
-    background-color: var(--surface-page);
 }
 
 .map-card img {
