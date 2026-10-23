@@ -1,0 +1,509 @@
+/*global styles*/
+body{
+ margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    background-color: #fcfcfc;
+}
+ul{
+ list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+text-blue {
+    color: #0056D2;
+}
+/* =========================================
+   Landing Page (index.html)
+   ========================================= */
+/* Navigation */
+.nav-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+}
+.nav-description {
+    font-size: 24px;
+    font-weight: 900;
+    color: #0056D2;
+    margin: 0;
+}
+nav-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: #333;
+}
+.nav-button:last-child {
+    background-color: #0056D2;
+    color: #fff;
+}
+/* Hero */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
+    background-color: #f8f9fa;
+    gap: 40px;
+}
+.hero-section > div {
+    flex: 1;
+}
+.hero-title {
+    font-size: 56px;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #222;
+}
+.hero-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 480px;
+    line-height: 1.6;
+}
+.hero-input {
+    padding: 14px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 320px;
+    outline: none;
+}
+.hero-button {
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #0056D2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 12px;
+}
+.hero-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+/* Workflow Section */
+.workflow-section {
+    padding: 80px 60px;
+    text-align: center;
+    background-color: #fff;
+}
+.workflow-section > .workflow-title {
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #222;
+}
+.workflow-section > .workflow-description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 60px;
+}
+.workflow-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: left;
+}
+.workflow-cards > div {
+    flex: 1;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #eaeaea;
+}
+.workflow-cards .workflow-img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 24px;
+}
+.workflow-cards .workflow-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #222;
+}
+.workflow-cards .workflow-description {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+/* Context Section */
+.context-section {
+    display: flex;
+    align-items: center;
+    padding: 80px 60px;
+    background-color: #f8f9fa;
+    gap: 80px;
+}
+.context-image-wrapper {
+    flex: 1;
+}
+.context-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.context-content {
+    flex: 1;
+}
+.context-title {
+    font-size: 32px;
+    margin-bottom: 24px;
+    color: #222;
+}
+.context-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+.workflow-list-items {
+    font-size: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    color: #444;
+}
+.workflow-list-items::before {
+    content: '✓';
+    color: #0056D2;
+    font-weight: bold;
+    margin-right: 12px;
+    background: #e6f0ff;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+/* Quote Section */
+.quote-section {
+    padding: 100px 60px;
+    text-align: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quote-content {
+    max-width: 800px;
+}
+.quote-text {
+    font-size: 26px;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+.quote-section .workflow-img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    object-fit: cover;
+}
+.quote-author {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.4;
+}
+.quote-author strong {
+    color: #222;
+    font-size: 18px;
+}
+/* Footer Section */
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px;
+    background-color: #f1f3f5;
+    border-top: 1px solid #e9ecef;
+}
+.footer-section .workflow-title {
+    font-size: 24px;
+    font-weight: 900;
+    color: #0056D2;
+    margin: 0 0 8px 0;
+}
+.footer-section .workflow-description {
+    font-size: 14px;
+    color: #666;
+    margin: 4px 0;
+}
+.footer-section .workflow-links {
+    margin-left: 24px;
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+}
+.footer-section .workflow-links:hover {
+    color: #0056D2;
+}
+/* =========================================
+   Dashboard & Study Spaces
+   ========================================= */
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+/* Side Navigation */
+.side-nav-section {
+    width: 240px;
+    background-color: #f1f3f5;
+    padding: 32px 24px;
+    border-right: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+}
+.side-nav-title {
+    font-size: 24px;
+    font-weight: 900;
+    color: #0056D2;
+    margin: 0 0 32px 0;
+}
+.side-nav-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+}
+.side-nav-section > p.side-nav-description {
+    margin: 4px 0;
+    font-size: 13px;
+    color: #555; 
+}
+.side-nav-section > p.side-nav-description:nth-of-type(2) {
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 32px;
+    font-size: 15px;
+}
+.side-nav-section > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    cursor: pointer;
+    color: #555;
+}
+.side-nav-section > div:hover {
+    color: #0056D2;
+}
+.side-nav-links {
+    font-size: 15px;
+    font-weight: 500;
+}
+.side-nav-button {
+    background-color: #0056D2;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 16px;
+    margin-left: 0;
+}
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 48px;
+    max-width: 1200px;
+}
+.welcome-title {
+    font-size: 32px;
+    margin: 0 0 12px 0;
+    color: #222;
+}
+.welcome-description {
+    font-size: 16px;
+    color: #666;
+    margin: 0 0 40px 0;
+}
+/* Dashboard Grid Layout */
+.dashboard-grid {
+    display: flex;
+    gap: 32px;
+}
+.dashboard-grid > div {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    flex: 1;
+}
+/* Card Styles */
+.active-card, .event-card, .dashboard-grid > div > div {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+.active-img, .event-img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 24px;
+}
+.active-title, .event-title {
+    font-size: 22px;
+    margin: 0 0 12px 0;
+    color: #222;
+}
+.active-description, .event-description {
+    font-size: 15px;
+    color: #666;
+    margin: 0 0 16px 0;
+}
+/* Progress bars */
+progress {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+progress::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 4px;
+}
+progress::-webkit-progress-value {
+    background-color: #0056D2;
+    border-radius: 4px;
+}
+.active-button, .event-button {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 16px;
+}
+.active-button:hover, .event-button:hover {
+    background-color: #eee;
+}
+.event-list {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+.event-list-items {
+    font-size: 15px;
+    margin-bottom: 16px;
+    color: #444;
+}
+/* Study Spaces Specific */
+.seating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.seating-title {
+    font-size: 28px;
+    margin: 0 24px 0 0;
+    color: #222;
+}
+.seating-img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+.seating-description {
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+    margin: 0 24px 0 0;
+    background: #e9ecef;
+    padding: 4px 12px;
+    border-radius: 16px;
+}
+/* Grid for Study Spaces */
+.main-content > div:not(.seating):not(.LibFlow):not(.welcome-container):not(.dashboard-grid) {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+.main-content > div:not(.seating):not(.LibFlow):not(.welcome-container):not(.dashboard-grid) > div {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+.General-study-title, .Computer-lab-title {
+    font-size: 22px;
+    margin: 0 0 12px 0;
+    color: #222;
+}
+.General-study-description, .Computer-lab-description {
+    font-size: 15px;
+    color: #666;
+    margin: 0 0 16px 0;
+}
+.General-study-progress-bar {
+    width: 100%;
+}
+.Computer-lab-img, .General-study-img {
+    max-width: 100%;
+    margin-top: 24px;
+    border-radius: 8px;
+}
+/* Lists in Study spaces */
+.Computer-lab-list {
+    margin-left: 20px;
+    list-style-type: circle;
+}
+.Computer-lab-list-items {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+/* Libflow Footer for inner pages */
+.LibFlow {
+    margin-top: 60px;
+    padding-top: 32px;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.LibFlow-title {
+    font-size: 20px;
+    font-weight: 900;
+    color: #0056D2;
+    margin: 0;
+}
+.LibFlow-description {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    flex: 1;
+}
+.Libflow-links {
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+}
+.Libflow-links:hover {
+    color: #0056D2;
+}
