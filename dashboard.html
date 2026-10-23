@@ -2,174 +2,222 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LibFlow — Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="side-nav-section">
-        <h1 class="side-nav-title">
-            LibFlow
-        </h1>
-        <img src="images/hero-image-1.png" class="side-nav-img">
-        <p class="side-nav-description">
-            Currently Browsing
-        </p>
-        <p class="side-nav-description">
-            Central Branch
-        </p>
-        <div>
-            <img src="images/dashboard.icon.png" class="side-nav-img">
-            <a class="side-nav-links">
-                Dashboard
+<body class="app-body">
+    <!-- =====================================================================
+         APP SHELL
+         Structure fix: sidebar and content are now children of ONE flex
+         container (.dashboard-layout). In the original both were siblings
+         directly inside <body>, so there was no row to lay them out in and
+         the sidebar became a full-width block above the content.
+         ================================================================== -->
+    <div class="dashboard-layout">
+
+        <!-- ---------------- SIDEBAR ---------------- -->
+        <aside class="side-nav-section">
+            <h1 class="side-nav-title">LibFlow</h1>
+
+            <!-- Branch switcher: flex row of avatar | text | chevron -->
+            <a class="branch-card" href="study.html">
+                <img src="images/hero-image-1.png" class="branch-img" alt="">
+                <span class="branch-text">
+                    <span class="branch-label">Currently Browsing</span>
+                    <span class="branch-name">Central Branch</span>
+                </span>
+                <span class="branch-chevron" aria-hidden="true"></span>
             </a>
-        </div>
-        <div>
-            <img src="images/black-book.png" class="side-nav-img">
-            <a class="side-nav-links">
-                Catalog
-            </a>
-        </div>
-        <div>
-            <img src="images/chair-2.png" class="side-nav-img">
-            <a class="side-nav-links">
-                Study Spaces
-            </a>
-        </div>
-        <div>
-            <img src="images/account-logo.png" class="side-nav-img">
-            <a class="side-nav-links">
-                My Account
-            </a>
-        </div>
-        <div>
-            <img src="images/study-image.png" class="side-nav-img">
-            <button class="side-nav-button">
+
+            <nav class="side-nav-menu" aria-label="Main">
+                <a class="side-nav-item is-active" href="dashboard.html" aria-current="page">
+                    <img src="images/dashboard.icon.png" class="side-nav-img" alt="">
+                    <span class="side-nav-links">Dashboard</span>
+                </a>
+                <a class="side-nav-item" href="#">
+                    <img src="images/book-img.png" class="side-nav-img" alt="">
+                    <span class="side-nav-links">Catalog</span>
+                </a>
+                <a class="side-nav-item" href="study.html">
+                    <img src="images/chair-2.png" class="side-nav-img" alt="">
+                    <span class="side-nav-links">Study Spaces</span>
+                </a>
+                <a class="side-nav-item" href="#">
+                    <img src="images/account-logo.png" class="side-nav-img" alt="">
+                    <span class="side-nav-links">My Account</span>
+                </a>
+            </nav>
+
+            <button class="side-nav-button" type="button">
+                <img src="images/study-image.png" alt="">
                 Reserve a Seat
             </button>
-        </div>
-        <div>
-            <img src="images/setting-logo.png" class="side-nav-img">
-            <a class="side-nav-links">
-                Settings
-            </a>
-        </div>
-        <div>
-            <img src="images/support-logo.png" class="side-nav-img">
-            <a class="side-nav-links">
-                Support
-            </a>
-        </div>
-    </div>
-    <div class="welcome-container">
-        <h1 class="welcome-title">
-            Welcome back, Alex.
-        </h1>
-        <p class="welcome-description">
-            Here is a quick overview of your current library activity.
-        </p>
-    </div>
-    <div>
-        <div class="active-card">
-            <img src="images/book-img.png" class="active-img">
-            <p class="active-description">
-                Active Borrowing
-            </p>
-            <h1 class="active-title">
-                The Great Gatsby
-            </h1>
-            <p class="active-description">
-                F. Scott Fitzgerald
-            </p>
-            <progress value="70" max="100">70%</progress class="active-progeress-bar">
-            <p class="active-description">
-                Renew Loan
-            </p>
-        </div>
-        <div>
-            <img src="images/location-image.png" class="active-img">
-            <h1 class="active-title">
-                Central Library
-            </h1>
-            <p class="active-description">
-                OPEN
-            </p>
-            <p class="active-description">
-                Real-time Seating Capacity
-            </p>
-            <p class="active-description">
-                42
-                / 50 available
-            </p>
-            <progress value="80" max="100">80%</progress class="active-progresss-bar">
-            <p class="active-description">
-                Quiet
-            </p>
-            <button class="active-button">
-                Book a Room
-            </button>
-        </div>
-    </div>
-    <div>
-        <div class="event-card">
-            <img src="images/clock.png" class="event-img">
-            <p class="event-description">
-                Recent Searches
-            </p>
-            <ul class="event-list">
-                <li class="event-list-items">
-                    Machine Learning basics
-                </li>
-                <li class="event-list-items">
-                    19th Century European History
-                </li>
-                <li class="event-list-items">
-                    Design Systems
-                </li>
-            </ul>
-        </div>
-        <div>
-            <img src="images/saved-icon.png" class="event-img">
-            <h1 class="event-title">
-                2 Saved Lists
-            </h1>
-            <p class="event-description">
-                View your curated collections.
-            </p>
-            <button class="event-button">
-                View Lists
-            </button>
-        </div>
-        <div>
-            <h1 class="event-title">
-                UPCOMING EVENTS
-                <p class="event-description">
-                    OCT
-                </p>
-                <h1 class="event-title">
-                    12
-                </h1>
-                <h2 class="event-title">
-                    Introduction to Archives
-                </h2>
-                <p class="event-description">
-                    10:00 AM • Room 302
-                </p>
-                <p class="event-description">
-                    OCT
-                </p>
-                <h1 class="event-title">
-                    18
-                </h1>
-                <h2 class="event-title">
-                    Digital Research Tools
-                </h2>
-                <p class="event-description">
-                    2:00 PM • Virtual
-                </p>
-        </div>
+
+            <!-- margin-top:auto pins this group to the bottom of the sidebar -->
+            <nav class="side-nav-footer" aria-label="Secondary">
+                <a class="side-nav-item" href="#">
+                    <img src="images/setting-logo.png" class="side-nav-img" alt="">
+                    <span class="side-nav-links">Settings</span>
+                </a>
+                <a class="side-nav-item" href="#">
+                    <img src="images/support-logo.png" class="side-nav-img" alt="">
+                    <span class="side-nav-links">Support</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- ---------------- MAIN COLUMN ---------------- -->
+        <main class="main-content">
+
+            <!-- Top bar: space-between pushes search left, actions right -->
+            <div class="app-topbar">
+                <div class="app-search">
+                    <img src="images/search.png" alt="">
+                    <label for="catalog-search" class="visually-hidden">Search catalog</label>
+                    <input id="catalog-search" type="search" placeholder="Search catalog...">
+                </div>
+
+                <div class="app-topbar-actions">
+                    <button class="icon-button" type="button" aria-label="Notifications">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.7 21a2 2 0 0 1-3.4 0"></path>
+                        </svg>
+                    </button>
+                    <img src="images/hero-image-1.png" class="app-avatar" alt="Alex's profile">
+                </div>
+            </div>
+
+            <div class="page-body">
+                <div class="welcome-container">
+                    <h2 class="welcome-title">Welcome back, Alex.</h2>
+                    <p class="welcome-description">
+                        Here is a quick overview of your current library activity.
+                    </p>
+                </div>
+
+                <!-- Two columns. The wide column holds borrowing + the two small
+                     cards; the narrow one holds branch status and events. -->
+                <div class="dashboard-grid">
+
+                    <div class="dashboard-column dashboard-column--wide">
+                        <!-- Active borrowing: flex row of text | cover -->
+                        <section class="card borrow-card">
+                            <div class="borrow-main">
+                                <div class="card-head">
+                                    <img src="images/book-img.png" alt="">
+                                    <p class="card-label">Active Borrowing</p>
+                                </div>
+
+                                <h3 class="borrow-title">The Great Gatsby</h3>
+                                <p class="borrow-author">F. Scott Fitzgerald</p>
+
+                                <div class="timeline">
+                                    <div class="timeline-track">
+                                        <div class="timeline-fill"></div>
+                                        <div class="timeline-dot"></div>
+                                    </div>
+                                    <div class="timeline-labels">
+                                        <span>Oct 1</span>
+                                        <span class="is-today">Today</span>
+                                        <span>Oct 10</span>
+                                        <span>Oct 13</span>
+                                    </div>
+                                </div>
+
+                                <div class="card-actions">
+                                    <a class="card-link" href="#">Renew Loan</a>
+                                </div>
+                            </div>
+
+                            <img src="images/gat-b.png" class="borrow-cover" alt="Cover of The Great Gatsby">
+                        </section>
+
+                        <div class="dashboard-row">
+                            <section class="card">
+                                <div class="card-head">
+                                    <img src="images/clock.png" alt="">
+                                    <p class="card-label card-label--muted">Recent Searches</p>
+                                </div>
+
+                                <ul class="search-list">
+                                    <li class="search-list-items">Machine Learning basics</li>
+                                    <li class="search-list-items">19th Century European History</li>
+                                    <li class="search-list-items">Design Systems</li>
+                                </ul>
+                            </section>
+
+                            <section class="card card--center">
+                                <span class="icon-tile">
+                                    <img src="images/saved-icon.png" alt="">
+                                </span>
+                                <h3 class="card-title">2 Saved Lists</h3>
+                                <p class="card-description">View your curated collections.</p>
+                                <button class="button button--outline button--block" type="button">View Lists</button>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-column">
+                        <!-- Branch status -->
+                        <section class="card">
+                            <div class="branch-head">
+                                <img src="images/location-image.png" alt="">
+                                <p class="card-label">Central Library</p>
+                                <span class="tag tag--ok">OPEN</span>
+                            </div>
+
+                            <p class="card-meta">Real-time Seating Capacity</p>
+
+                            <div class="stat-line">
+                                <span class="stat-value">42</span>
+                                <span class="stat-unit">/ 50 available</span>
+                            </div>
+
+                            <progress value="84" max="100">84%</progress>
+
+                            <div class="stat-row">
+                                <span>Noise level</span>
+                                <span>Quiet</span>
+                            </div>
+
+                            <button class="button button--outline button--block" type="button">Book a Room</button>
+                        </section>
+
+                        <!-- Upcoming events -->
+                        <section class="card">
+                            <p class="feature-heading">Upcoming Events</p>
+
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="event-month">OCT</span>
+                                    <span class="event-day">12</span>
+                                </div>
+                                <div>
+                                    <h3 class="event-title">Introduction to Archives</h3>
+                                    <p class="event-meta">10:00 AM &middot; Room 302</p>
+                                </div>
+                            </div>
+
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="event-month">OCT</span>
+                                    <span class="event-day">18</span>
+                                </div>
+                                <div>
+                                    <h3 class="event-title">Digital Research Tools</h3>
+                                    <p class="event-meta">2:00 PM &middot; Virtual</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 </body>
 

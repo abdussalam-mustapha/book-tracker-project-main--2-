@@ -4,199 +4,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LibFlow — Seating Availability</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="side-nav-section">
-        <h1 class="side-nav-title">
-            LibFlow
-        </h1>
-        <img src="images/hero-image-1.png" class="side-nav-img">
-        <p class="side-nav-description">
-            Currently Browsing
-        </p>
-        <p class="side-nav-description">
-            Central Branch
-        </p>
-        <div>
-            <img src="images/dashboard.icon.png" class="side-nav-img">
-            <a class="side-nav-links">
-                Dashboard
+<body class="app-body">
+    <div class="dashboard-layout">
+
+        <!-- ---------------- SIDEBAR ---------------- -->
+        <aside class="side-nav-section">
+            <h1 class="side-nav-title">LibFlow</h1>
+
+            <a class="branch-card" href="study.html">
+                <img src="images/hero-image-1.png" class="branch-img" alt="">
+                <span class="branch-text">
+                    <span class="branch-label">Currently Browsing</span>
+                    <span class="branch-name">Central Branch</span>
+                </span>
+                <span class="branch-chevron" aria-hidden="true"></span>
             </a>
-        </div>
-        <div>
-            <img src="images/black-book.png" class="side-nav-img">
-            <a class="side-nav-links">
-                Catalog
-            </a>
-        </div>
-        <div>
-            <img src="images/chair-2.png" class="side-nav-img">
-            <a class="side-nav-links">
-                Study Spaces
-            </a>
-        </div>
-        <div>
-            <img src="images/account-logo.png" class="side-nav-img">
-            <a class="side-nav-links">
-                My Account
-            </a>
-        </div>
-        <div>
-            <img src="images/study-image.png" class="side-nav-img">
-            <button class="side-nav-button">
+
+            <nav class="side-nav-menu" aria-label="Main">
+                <a class="side-nav-item" href="dashboard.html">
+                    <img src="images/dashboard.icon.png" class="side-nav-img" alt="">
+                    <span class="side-nav-links">Dashboard</span>
+                </a>
+                <a class="side-nav-item" href="#">
+                    <img src="images/book-img.png" class="side-nav-img" alt="">
+                    <span class="side-nav-links">Catalog</span>
+                </a>
+                <a class="side-nav-item is-active" href="study.html" aria-current="page">
+                    <img src="images/chair-2.png" class="side-nav-img" alt="">
+                    <span class="side-nav-links">Study Spaces</span>
+                </a>
+                <a class="side-nav-item" href="#">
+                    <img src="images/account-logo.png" class="side-nav-img" alt="">
+                    <span class="side-nav-links">My Account</span>
+                </a>
+            </nav>
+
+            <button class="side-nav-button" type="button">
+                <img src="images/study-image.png" alt="">
                 Reserve a Seat
             </button>
-        </div>
-        <div>
-            <img src="images/setting-logo.png" class="side-nav-img">
-            <a class="side-nav-links">
-                Settings
-            </a>
-        </div>
-        <div>
-            <img src="images/support-logo.png" class="side-nav-img">
-            <a class="side-nav-links">
-                Support
-            </a>
-        </div>
-    </div>
-    <div class="seating">
-        <h1 class="seating-title">
-            Seating Availability
-        </h1>
-        <img src="images/location-image.png" class="seating-img">
-        <p class=" seating-description">
-            Central Library
-        </p>
-        <p class="seating-description">
-            Live Updates
-        </p>
-    </div>
-    <div>
-        <div class="General-study">
-            <h1 class="General-study-title">
-                Main Hall
-            </h1>
-            <p class="General-study-description">
-                General Reading & Study
-            </p>
-            <p class="General-study-description">
-                High Traffic
-            </p>
-            <h1 class="General-study-title">
-                85%
-            </h1>
-            <p class="General-study-description">
-                Total Seats
-                240
-            </p>
-            <p class="General-study-description">
-                Available
-                36
-            </p>
-            <p class="General-study-description">
-                Noise Level
-                <img src="images/speaker-logo.png" class="General-study-img"> Moderate
-            </p>
-        </div>
-        <div>
-            <h1 class="General-study-title">
-                Quiet Reading
-                Room
-            </h1>
-            <p class="General-study-description">
-                Available
-            </p>
-            <p class="General-study-description">
-                Silent Study Zone
-            </p>
-            <h1 class="General-study-title">
-                20%
-            </h1>
-            <h2 class="General-study-title">
-                FULL
-            </h2>
-            <progress value="20" max="100">20%</progress class="General-study-progress-bar">
-        </div>
-    </div>
-    <div>
-        <div class="Computer-lab">
-            <h1 class="Computer-lab-title">
-                Computer
-                Lab
-            </h1>
-            <p class="Computer-lab-description">
-                Moderate
-            </p>
-            <p class="Computer-lab-description">
-                Workstations & Print
-            </p>
-            <h1 class="Computer-lab-title">
-                50%
-            </h1>
-            <h2 class="Computer-lab-description">
-                FULL
-            </h2>
-            <img src="images/desktop-tv.png" class="Computer-lab-img">
-            <p class="Computer-lab-description">
-                24 / 48 PCs Available
-            </p>
-        </div>
-        <div>
-            <h1 class="Computer-lab-title">
-                Children's Wing
-            </h1>
-            <p class="Computer-lab-description">
-                Empty
-            </p>
-            <p class="Computer-lab-description">
-                Interactive Learning & Story Area
-            </p>
-            <h1 class="Computer-lab-title">
-                10%
-            </h1>
-            <p class="Computer-lab-description">
-                Current Capacity
-            </p>
-            <h1 class="Computer-lab-title">
-                FEATURES
-            </h1>
-            <ul class="Computer-lab-list">
-                <l1 class="Computer-lab-list-items">
-                    Play Area
-                </l1>
-                <li class="Computer-lab-list-items">
-                    Group Reading Tables
-                </li>
-                <li class="Computer-lab-list-items">
-                    Family Restrooms nearby
-                </li>
-            </ul>
-            <img src="images/map-2.png" class="Computer-lab-img">
-        </div>
-    </div>
-    <div class="LibFlow">
-        <h1 class="LibFlow-title">
-            LibFlow
-        </h1>
-        <p class="LibFlow-description">
-            &copy; 2026 LibFlow System. Quiet Intelligence for Mordern Libraries.
-        </p>
-        <a class="Libflow-links">
-            Privacy Policy
-        </a>
-        <a class="Libflow-links">
-            Terms of Service
-        </a>
-        <a class="Libflow-links">
-            Contact Librarian
-        </a>
-        <a class="Libflow-links">
-            API Access
-        </a>
+
+            <nav class="side-nav-footer" aria-label="Secondary">
+                <a class="side-nav-item" href="#">
+                    <img src="images/setting-logo.png" class="side-nav-img" alt="">
+                    <span class="side-nav-links">Settings</span>
+                </a>
+                <a class="side-nav-item" href="#">
+                    <img src="images/support-logo.png" class="side-nav-img" alt="">
+                    <span class="side-nav-links">Support</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- ---------------- MAIN COLUMN ---------------- -->
+        <main class="main-content">
+
+            <div class="app-topbar">
+                <div class="app-search">
+                    <img src="images/search.png" alt="">
+                    <label for="catalog-search" class="visually-hidden">Search catalog</label>
+                    <input id="catalog-search" type="search" placeholder="Search catalog...">
+                </div>
+
+                <div class="app-topbar-actions">
+                    <button class="icon-button" type="button" aria-label="Notifications">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.7 21a2 2 0 0 1-3.4 0"></path>
+                        </svg>
+                    </button>
+                    <img src="images/hero-image-1.png" class="app-avatar" alt="Alex's profile">
+                </div>
+            </div>
+
+            <div class="page-body">
+                <div class="page-head">
+                    <h2 class="page-title">Seating Availability</h2>
+
+                    <div class="page-head-meta">
+                        <span class="meta-pill">
+                            <img src="images/location-image.png" alt="">
+                            Central Library
+                        </span>
+                        <span class="meta-pill meta-pill--live">Live Updates</span>
+                    </div>
+                </div>
+
+                <div class="study-grid">
+
+                    <!-- Row 1: Main Hall (wider) + Quiet Reading Room -->
+                    <div class="study-row study-row--lead">
+                        <section class="card">
+                            <div class="seat-head">
+                                <div>
+                                    <h3 class="seat-title">Main Hall</h3>
+                                    <p class="seat-subtitle">General Reading &amp; Study</p>
+                                </div>
+                                <span class="tag tag--busy">High Traffic</span>
+                            </div>
+
+                            <!-- Ring + stat list side by side -->
+                            <div class="seat-body">
+                                <!-- --value drives the conic-gradient in style.css -->
+                                <div class="ring" style="--value: 85; --ring-color: var(--red);">
+                                    <span class="ring-value">85%</span>
+                                </div>
+
+                                <div class="seat-stats">
+                                    <div>
+                                        <span>Total Seats</span>
+                                        <strong>240</strong>
+                                    </div>
+                                    <div>
+                                        <span>Available</span>
+                                        <strong>36</strong>
+                                    </div>
+                                    <div>
+                                        <span>Noise Level</span>
+                                        <span class="noise">
+                                            <img src="images/speaker-logo.png" alt="">
+                                            Moderate
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="card">
+                            <div class="seat-head">
+                                <div>
+                                    <h3 class="seat-title">Quiet Reading Room</h3>
+                                    <p class="seat-subtitle">Silent Study Zone</p>
+                                </div>
+                                <span class="tag tag--ok">Available</span>
+                            </div>
+
+                            <div class="stat-line">
+                                <span class="stat-value">20%</span>
+                            </div>
+                            <p class="card-meta">FULL</p>
+                            <progress value="20" max="100">20%</progress>
+                        </section>
+                    </div>
+
+                    <!-- Row 2: Computer Lab + Children's Wing -->
+                    <div class="study-row">
+                        <section class="card">
+                            <div class="seat-head">
+                                <div>
+                                    <h3 class="seat-title">Computer Lab</h3>
+                                    <p class="seat-subtitle">Workstations &amp; Print</p>
+                                </div>
+                                <span class="tag tag--warn">Moderate</span>
+                            </div>
+
+                            <div class="seat-body">
+                                <div class="stat-line">
+                                    <span class="stat-value">50%</span>
+                                </div>
+
+                                <div class="ring ring--small" style="--value: 50; --ring-color: var(--amber);"></div>
+                            </div>
+
+                            <div class="stat-row">
+                                <span>FULL</span>
+                                <span class="noise">
+                                    <img src="images/desktop-tv.png" alt="">
+                                    24 / 48 PCs available
+                                </span>
+                            </div>
+                        </section>
+
+                        <section class="card">
+                            <div class="seat-head">
+                                <div>
+                                    <h3 class="seat-title">Children's Wing</h3>
+                                    <p class="seat-subtitle">Interactive Learning &amp; Story Area</p>
+                                </div>
+                                <span class="tag tag--ok">Empty</span>
+                            </div>
+
+                            <div class="percent-box">
+                                <span class="stat-value">10%</span>
+                                <span class="percent-caption">Current Capacity</span>
+                            </div>
+
+                            <p class="feature-heading">Features</p>
+                            <ul class="feature-list">
+                                <li class="feature-list-items">Play Area</li>
+                                <li class="feature-list-items">Group Reading Tables</li>
+                                <li class="feature-list-items">Family Restrooms nearby</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <!-- Row 3: floor plan (the image includes its own "View
+                         Interactive Map" action) -->
+                    <div class="map-card">
+                        <img src="images/map-2.png" alt="Floor plan of the Central Library reading hall and rooms">
+                    </div>
+                </div>
+
+                <footer class="LibFlow">
+                    <p class="LibFlow-title">LibFlow</p>
+                    <p class="LibFlow-description">
+                        &copy; 2026 LibFlow Systems. Quiet Intelligence for Modern Libraries.
+                    </p>
+
+                    <nav class="Libflow-link-group" aria-label="Legal and support">
+                        <a class="Libflow-links" href="#">Privacy Policy</a>
+                        <a class="Libflow-links" href="#">Terms of Service</a>
+                        <a class="Libflow-links" href="#">Contact Librarian</a>
+                        <a class="Libflow-links" href="#">API Access</a>
+                    </nav>
+                </footer>
+            </div>
+        </main>
     </div>
 </body>
 
